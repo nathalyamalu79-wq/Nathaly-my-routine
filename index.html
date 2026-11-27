@@ -148,3 +148,50 @@ setInterval(()=>{const now=new Date(),t=now.toTimeString().slice(0,5),key=today(
 if('serviceWorker'in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body></html>
+$('enableNotifications').onclick=async()=>{
+  if(!('Notification' in window)){
+    toast('Notificações não suportadas neste navegador.');
+    return;
+  }
+  const p=await Notification.requestPermission();
+  toast(p==='granted'?'Notificações permitidas.':'Permissão não concedida.');
+};
+
+$('addReminder').onclick=()=>{
+  const text=$('reminderText').value.trim();
+  const time=$('reminderTime').value;
+  if(!text||!time){
+    toast('Preencha o texto e o horário.');
+    return;
+  }
+  reminders.push({text,time});
+  save('reminders',reminders);
+  renderReminders();
+  toast('Lembrete salvo.');
+};
+
+setInterval(()=>{
+  const now=new Date();
+  const t=now.toTimeString().slice(0,5);
+  const key=today()+'_'+t;
+  if(!load('sent_'+key,false)){
+    const due=reminders.filter(r=>r.time===t);
+    if(due.length){
+      due.forEach(r=>{
+        if('Notification' in window && Notification.permission==='granted'){
+          new Notification('My Routine 🌷',{body:r.text});
+        }else{
+          toast(r.text);
+        }
+      });
+      save('sent_'+key,true);
+    }
+  }
+},30000);
+
+if('serviceWorker' in navigator && location.protocol.startsWith('http')){
+  navigator.serviceWorker.register('./sw.js').catch(console.error);
+}
+</script>
+</body>
+</html>
