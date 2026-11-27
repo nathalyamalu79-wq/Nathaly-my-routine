@@ -32,7 +32,7 @@ jobs:
           cp index.html www/
           cp manifest.json www/
           cp sw.js www/
-          cp -r 192 512 www/
+         
           npm init -y
           npm install @capacitor/core @capacitor/cli @capacitor/android
 
