@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Preparar arquivos
+      - name: Preparar projeto
         run: |
           mkdir -p www
           cp index.html www/
@@ -40,19 +40,19 @@ jobs:
           npm init -y
           npm install @capacitor/core@7 @capacitor/cli@7 @capacitor/android@7
 
-      - name: Configurar Android
+      - name: Configurar Capacitor
         run: |
           npx cap init "My Routine" "com.myroutine.app" --web-dir www
           npx cap add android
           npx cap sync android
 
-      - name: Compilar APK
+      - name: Gerar APK
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug --no-daemon
 
-      - name: Disponibilizar APK
+      - name: Salvar APK
         uses: actions/upload-artifact@v4
         with:
           name: My-Routine-APK
