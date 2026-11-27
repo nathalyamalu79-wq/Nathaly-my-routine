@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -8,24 +9,48 @@
 <link rel="manifest" href="manifest.json">
 <style>
 :root{--pink:#e9a9ce;--pink2:#f8e4f0;--lilac:#c8b7ed;--lilac2:#eee9fa;--ink:#46394c;--muted:#88798d;--white:#fff;--bg:#fff9fd;--line:#f0e5ef}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px system-ui,-apple-system,Segoe UI,sans-serif}
-button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px system-ui,-apple-system,Segoe UI,sans-serif}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer;border:0}
 header{padding:22px 18px 14px;background:linear-gradient(135deg,#f9e6f1,#eee8fb);border-radius:0 0 25px 25px}
-.top{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:800;letter-spacing:.4px}.small{font-size:12px;color:var(--muted)}
-h1{font-size:25px;margin:20px 0 4px}h2{font-size:19px;margin:0 0 12px}h3{font-size:15px;margin:0 0 8px}
-main{padding:16px 15px 95px;max-width:760px;margin:auto}.hero{background:#fff;border:1px solid var(--line);padding:16px;border-radius:19px;margin-top:14px;box-shadow:0 5px 20px #69476a0a}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile{background:white;border:1px solid var(--line);padding:15px;border-radius:17px;text-align:left;color:var(--ink);min-height:100px}.tile b{display:block;margin-top:8px}.emoji{font-size:24px}.tile span:last-child{font-size:12px;color:var(--muted)}
+.top{display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:800;letter-spacing:.4px}
+.small{font-size:12px;color:var(--muted)}
+h1{font-size:25px;margin:20px 0 4px}
+h2{font-size:19px;margin:0 0 12px}
+h3{font-size:15px;margin:0 0 8px}
+main{padding:16px 15px 95px;max-width:760px;margin:auto}
+.hero{background:#fff;border:1px solid var(--line);padding:16px;border-radius:19px;margin-top:14px;box-shadow:0 5px 20px #69476a0a}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{background:white;border:1px solid var(--line);padding:15px;border-radius:17px;text-align:left;color:var(--ink);min-height:100px}
+.tile b{display:block;margin-top:8px}
+.emoji{font-size:24px}
+.tile span:last-child{font-size:12px;color:var(--muted)}
 nav{position:fixed;bottom:0;left:0;right:0;background:#fffdfef2;backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:9px 4px calc(9px + env(safe-area-inset-bottom));z-index:5}
-nav button{background:none;color:var(--muted);font-size:11px;padding:4px;display:grid;gap:3px;justify-items:center}nav button strong{font-size:19px}nav button.active{color:#a75e91;font-weight:700}
-.page{display:none}.page.active{display:block}.row{display:flex;gap:8px;align-items:center}.between{justify-content:space-between}
-.card{background:white;border:1px solid var(--line);padding:15px;border-radius:17px;margin:10px 0}.muted{color:var(--muted);font-size:13px}
+nav button{background:none;color:var(--muted);font-size:11px;padding:4px;display:grid;gap:3px;justify-items:center}
+nav button strong{font-size:19px}
+nav button.active{color:#a75e91;font-weight:700}
+.page{display:none}
+.page.active{display:block}
+.row{display:flex;gap:8px;align-items:center}
+.between{justify-content:space-between}
+.card{background:white;border:1px solid var(--line);padding:15px;border-radius:17px;margin:10px 0}
+.muted{color:var(--muted);font-size:13px}
 input,textarea,select{width:100%;padding:11px 12px;border:1px solid #e9dce9;border-radius:12px;background:#fff;color:var(--ink);margin:5px 0 10px}
 .primary{background:linear-gradient(100deg,#e7acd0,#c7b8ed);color:#49374b;font-weight:700;padding:11px 15px;border-radius:12px}
 .secondary{background:var(--lilac2);color:#604f78;padding:9px 12px;border-radius:11px}
 .danger{background:#fff0f2;color:#a54b65;padding:8px 11px;border-radius:10px}
-.task{display:flex;align-items:center;gap:9px;padding:10px 0;border-bottom:1px solid var(--line)}.task input{width:auto;margin:0}.task.done span{text-decoration:line-through;color:#a99daa}
-label{font-size:13px;font-weight:650}.hidden{display:none!important}
-.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}.day{padding:8px 0;border-radius:10px;font-size:12px;background:#fbf8fc}.day.period{background:#f7d8e9}.day.today{outline:2px solid #b998df}.day.head{background:transparent;color:var(--muted);font-weight:700}
+.task{display:flex;align-items:center;gap:9px;padding:10px 0;border-bottom:1px solid var(--line)}
+.task input{width:auto;margin:0}
+.task.done span{text-decoration:line-through;color:#a99daa}
+label{font-size:13px;font-weight:650}
+.hidden{display:none!important}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}
+.day{padding:8px 0;border-radius:10px;font-size:12px;background:#fbf8fc}
+.day.period{background:#f7d8e9}
+.day.today{outline:2px solid #b998df}
+.day.head{background:transparent;color:var(--muted);font-weight:700}
 .pill{font-size:11px;padding:4px 8px;background:#f6edf8;border-radius:20px;color:#765b82}
 #lock{position:fixed;inset:0;background:linear-gradient(145deg,#fae8f2,#eee8fb);z-index:20;display:grid;place-items:center;padding:22px}
 .lockbox{background:white;border-radius:24px;padding:25px;width:min(100%,360px);text-align:center;box-shadow:0 15px 50px #654a6a20}
@@ -34,21 +59,36 @@ hr{border:0;border-top:1px solid var(--line);margin:14px 0}
 </style>
 </head>
 <body>
+
 <div id="lock">
  <div class="lockbox">
-  <div style="font-size:42px">🌷</div><h2>My Routine</h2><p class="muted" id="lockText">Crie um PIN para proteger seu cantinho.</p>
+  <div style="font-size:42px">🌷</div>
+  <h2>My Routine</h2>
+  <p class="muted" id="lockText">Crie um PIN para proteger seu cantinho.</p>
   <input id="pin" type="password" inputmode="numeric" maxlength="8" placeholder="PIN de 4 a 8 números" style="text-align:center;letter-spacing:5px">
   <button class="primary" style="width:100%" id="unlock">Continuar</button>
   <p class="small">Use um PIN que você não compartilha.</p>
  </div>
 </div>
+
 <header>
- <div class="top"><div class="brand">🌷 MY ROUTINE</div><span class="pill">meu cantinho</span></div>
- <h1 id="greeting">Olá! 💗</h1><div class="small" id="todayText">Um passo de cada vez.</div>
+ <div class="top">
+  <div class="brand">🌷 MY ROUTINE</div>
+  <span class="pill">meu cantinho</span>
+ </div>
+ <h1 id="greeting">Olá! 💗</h1>
+ <div class="small" id="todayText">Um passo de cada vez.</div>
 </header>
+
 <main>
 <section class="page active" id="home">
- <div class="hero"><div class="row between"><div><div class="small">SEU DIA</div><h2 style="margin:5px 0">Vamos com calma ✨</h2></div><div style="font-size:32px">🦋</div></div><div class="muted" id="taskProgress">Suas tarefas aparecerão aqui.</div></div>
+ <div class="hero">
+  <div class="row between">
+   <div><div class="small">SEU DIA</div><h2 style="margin:5px 0">Vamos com calma ✨</h2></div>
+   <div style="font-size:32px">🦋</div>
+  </div>
+  <div class="muted" id="taskProgress">Suas tarefas aparecerão aqui.</div>
+ </div>
  <h2 style="margin-top:20px">O que vamos cuidar hoje?</h2>
  <div class="grid">
   <button class="tile" data-go="tasks"><span class="emoji">✅</span><b>Minha rotina</b><span>Tarefas e horários</span></button>
@@ -58,140 +98,492 @@ hr{border:0;border-top:1px solid var(--line);margin:14px 0}
   <button class="tile" data-go="wellbeing"><span class="emoji">💜</span><b>Bem-estar</b><span>Humor, sono e autocuidado</span></button>
   <button class="tile" data-go="goals"><span class="emoji">⭐</span><b>Metas</b><span>Pequenos objetivos</span></button>
  </div>
- <div class="card"><h3>💌 Lembrete gentil</h3><p class="muted">Você não precisa fazer tudo perfeitamente. Descansar também faz parte de cuidar de você.</p></div>
+ <div class="card">
+  <h3>💌 Lembrete gentil</h3>
+  <p class="muted">Você não precisa fazer tudo perfeitamente. Descansar também faz parte de cuidar de você.</p>
+ </div>
 </section>
 
 <section class="page" id="tasks">
- <h2>✅ Minha rotina</h2><div class="card"><label>Nova tarefa</label><input id="taskInput" placeholder="Ex.: separar material da escola"><div class="row"><input id="taskTime" type="time" aria-label="Horário"><button class="primary" id="addTask">Adicionar</button></div><div id="taskList"></div></div>
+ <h2>✅ Minha rotina</h2>
+ <div class="card">
+  <label>Nova tarefa</label>
+  <input id="taskInput" placeholder="Ex.: separar material da escola">
+  <div class="row">
+   <input id="taskTime" type="time" aria-label="Horário">
+   <button class="primary" id="addTask">Adicionar</button>
+  </div>
+  <div id="taskList"></div>
+ </div>
 </section>
 
 <section class="page" id="cycle">
  <h2>🌸 Meu ciclo menstrual</h2>
- <div class="card"><p class="muted">Registre o primeiro dia da menstruação. As previsões são aproximadas e podem variar bastante, especialmente nos primeiros anos após a primeira menstruação.</p>
- <label>Primeiro dia da menstruação</label><input type="date" id="periodStart">
- <label>Último dia (opcional)</label><input type="date" id="periodEnd">
- <button class="primary" id="savePeriod">Salvar registro</button>
- <hr><label>Duração média do ciclo (opcional)</label><input type="number" id="cycleLength" min="20" max="45" value="28">
- <div class="muted" id="cycleEstimate">Ainda não há registros.</div></div>
- <div class="card"><h3>Calendário</h3><div class="row between"><button class="secondary" id="prevMonth">‹</button><b id="monthLabel"></b><button class="secondary" id="nextMonth">›</button></div><div class="days" id="calendar" style="margin-top:12px"></div><p class="muted">Rosa marca dias registrados de menstruação. O calendário não diagnostica nem prevê com certeza a ovulação ou dias férteis.</p></div>
- <div class="card"><h3>Como estou me sentindo?</h3><label>Sintomas ou observações</label><textarea id="symptoms" rows="3" placeholder="Ex.: cólica, dor de cabeça, disposição..."></textarea><button class="secondary" id="saveSymptoms">Salvar observação</button><div id="symptomHistory" class="muted"></div></div>
+ <div class="card">
+  <p class="muted">Registre o primeiro dia da menstruação. As previsões são aproximadas e podem variar bastante, especialmente nos primeiros anos após a primeira menstruação.</p>
+  <label>Primeiro dia da menstruação</label>
+  <input type="date" id="periodStart">
+  <label>Último dia (opcional)</label>
+  <input type="date" id="periodEnd">
+  <button class="primary" id="savePeriod">Salvar registro</button>
+  <hr>
+  <label>Duração média do ciclo (opcional)</label>
+  <input type="number" id="cycleLength" min="20" max="45" value="28">
+  <div class="muted" id="cycleEstimate">Ainda não há registros.</div>
+ </div>
+ <div class="card">
+  <h3>Calendário</h3>
+  <div class="row between">
+   <button class="secondary" id="prevMonth">‹</button>
+   <b id="monthLabel"></b>
+   <button class="secondary" id="nextMonth">›</button>
+  </div>
+  <div class="days" id="calendar" style="margin-top:12px"></div>
+  <p class="muted">Rosa marca dias registrados de menstruação. O calendário não diagnostica nem prevê com certeza a ovulação ou dias férteis.</p>
+ </div>
+ <div class="card">
+  <h3>Como estou me sentindo?</h3>
+  <label>Sintomas ou observações</label>
+  <textarea id="symptoms" rows="3" placeholder="Ex.: cólica, dor de cabeça, disposição..."></textarea>
+  <button class="secondary" id="saveSymptoms">Salvar observação</button>
+  <div id="symptomHistory" class="muted"></div>
+ </div>
 </section>
 
 <section class="page" id="food">
- <h2>🥗 Alimentação e água</h2><div class="card"><p class="muted">Ideias para se alimentar com variedade e regularidade. Não é uma dieta nem um plano para emagrecer.</p><label>Refeições de hoje</label><div id="meals"></div><label>Adicionar refeição ou lanche</label><input id="mealInput" placeholder="Ex.: iogurte com fruta"><button class="primary" id="addMeal">Adicionar</button></div>
- <div class="card"><h3>💧 Água</h3><p class="muted">Registre os copos que beber, sem cobrança.</p><div class="row between"><b id="waterCount">0 copos hoje</b><button class="primary" id="addWater">+ 1 copo</button></div><button class="secondary" id="resetWater" style="margin-top:8px">Zerar contagem do dia</button></div>
+ <h2>🥗 Alimentação e água</h2>
+ <div class="card">
+  <p class="muted">Ideias para se alimentar com variedade e regularidade. Não é uma dieta nem um plano para emagrecer.</p>
+  <label>Refeições de hoje</label>
+  <div id="meals"></div>
+  <label>Adicionar refeição ou lanche</label>
+  <input id="mealInput" placeholder="Ex.: iogurte com fruta">
+  <button class="primary" id="addMeal">Adicionar</button>
+ </div>
+ <div class="card">
+  <h3>💧 Água</h3>
+  <p class="muted">Registre os copos que beber, sem cobrança.</p>
+  <div class="row between">
+   <b id="waterCount">0 copos hoje</b>
+   <button class="primary" id="addWater">+ 1 copo</button>
+  </div>
+  <button class="secondary" id="resetWater" style="margin-top:8px">Zerar contagem do dia</button>
+ </div>
 </section>
 
 <section class="page" id="movement">
- <h2>🧘 Movimento</h2><div class="card"><p class="muted">Escolha movimentos agradáveis e adapte ao seu corpo. Pare se sentir dor, tontura ou mal-estar.</p><div id="exerciseList"></div><label>Atividade que fiz</label><input id="exerciseInput" placeholder="Ex.: dancei por 15 minutos"><button class="primary" id="addExercise">Registrar atividade</button><div id="exerciseHistory" class="muted"></div></div>
+ <h2>🧘 Movimento</h2>
+ <div class="card">
+  <p class="muted">Escolha movimentos agradáveis e adapte ao seu corpo. Pare se sentir dor, tontura ou mal-estar.</p>
+  <div id="exerciseList"></div>
+  <label>Atividade que fiz</label>
+  <input id="exerciseInput" placeholder="Ex.: dancei por 15 minutos">
+  <button class="primary" id="addExercise">Registrar atividade</button>
+  <div id="exerciseHistory" class="muted"></div>
+ </div>
 </section>
 
 <section class="page" id="wellbeing">
- <h2>💜 Bem-estar</h2><div class="card"><label>Como está meu humor hoje?</label><select id="mood"><option>😊 Feliz</option><option>😌 Tranquila</option><option>😐 Normal</option><option>🥺 Sensível</option><option>😟 Ansiosa</option><option>😴 Cansada</option></select><label>Uma coisa boa do meu dia</label><textarea id="goodThing" rows="2" placeholder="Hoje eu gostei de..."></textarea><button class="primary" id="saveMood">Salvar meu dia</button></div>
- <div class="card"><h3>🌙 Sono e descanso</h3><label>Que horas fui dormir?</label><input type="time" id="sleepTime"><label>Que horas acordei?</label><input type="time" id="wakeTime"><button class="secondary" id="saveSleep">Salvar horários</button></div>
- <div class="card"><h3>🫧 Pausa de respiração</h3><p class="muted">Inspire suavemente, solte o ar devagar e repita algumas vezes, sem forçar.</p><button class="secondary" id="breathe">Começar pausa de 1 minuto</button><p id="breathText" class="muted"></p></div>
+ <h2>💜 Bem-estar</h2>
+ <div class="card">
+  <label>Como está meu humor hoje?</label>
+  <select id="mood">
+   <option>😊 Feliz</option>
+   <option>😌 Tranquila</option>
+   <option>😐 Normal</option>
+   <option>🥺 Sensível</option>
+   <option>😟 Ansiosa</option>
+   <option>😴 Cansada</option>
+  </select>
+  <label>Uma coisa boa do meu dia</label>
+  <textarea id="goodThing" rows="2" placeholder="Hoje eu gostei de..."></textarea>
+  <button class="primary" id="saveMood">Salvar meu dia</button>
+ </div>
+ <div class="card">
+  <h3>🌙 Sono e descanso</h3>
+  <label>Que horas fui dormir?</label>
+  <input type="time" id="sleepTime">
+  <label>Que horas acordei?</label>
+  <input type="time" id="wakeTime">
+  <button class="secondary" id="saveSleep">Salvar horários</button>
+ </div>
+ <div class="card">
+  <h3>🫧 Pausa de respiração</h3>
+  <p class="muted">Inspire suavemente, solte o ar devagar e repita algumas vezes, sem forçar.</p>
+  <button class="secondary" id="breathe">Começar pausa de 1 minuto</button>
+  <p id="breathText" class="muted"></p>
+ </div>
 </section>
 
 <section class="page" id="goals">
- <h2>⭐ Minhas metas</h2><div class="card"><label>Pequena meta</label><input id="goalInput" placeholder="Ex.: ler algumas páginas"><button class="primary" id="addGoal">Adicionar meta</button><div id="goalList"></div></div>
- <div class="card"><h3>🔔 Lembretes</h3><p class="muted">Ative notificações neste aparelho para receber lembretes enquanto o navegador/sistema permitir.</p><label>Texto do lembrete</label><input id="reminderText" placeholder="Ex.: fazer uma pausa e beber água"><label>Horário</label><input type="time" id="reminderTime"><button class="secondary" id="enableNotifications">Ativar notificações</button><button class="primary" id="addReminder">Salvar lembrete</button><div id="reminderList" class="muted"></div></div>
- <div class="card"><h3>🔐 Privacidade</h3><p class="muted">O PIN bloqueia a tela do aplicativo. Esta primeira versão guarda os registros neste navegador; o PIN não criptografa os dados. Não use em aparelho compartilhado e não coloque informações que não queira que outras pessoas possam acessar.</p><button class="secondary" id="changePin">Trocar PIN</button><button class="danger" id="clearData" style="margin-left:6px">Apagar meus dados</button></div>
+ <h2>⭐ Minhas metas</h2>
+ <div class="card">
+  <label>Pequena meta</label>
+  <input id="goalInput" placeholder="Ex.: ler algumas páginas">
+  <button class="primary" id="addGoal">Adicionar meta</button>
+  <div id="goalList"></div>
+ </div>
+ <div class="card">
+  <h3>🔔 Lembretes</h3>
+  <p class="muted">Ative notificações neste aparelho para receber lembretes enquanto o navegador/sistema permitir.</p>
+  <label>Texto do lembrete</label>
+  <input id="reminderText" placeholder="Ex.: fazer uma pausa e beber água">
+  <label>Horário</label>
+  <input type="time" id="reminderTime">
+  <button class="secondary" id="enableNotifications">Ativar notificações</button>
+  <button class="primary" id="addReminder">Salvar lembrete</button>
+  <div id="reminderList" class="muted"></div>
+ </div>
+ <div class="card">
+  <h3>🔐 Privacidade</h3>
+  <p class="muted">O PIN bloqueia a tela do aplicativo. Esta primeira versão guarda os registros neste navegador; o PIN não criptografa os dados. Não use em aparelho compartilhado e não coloque informações que não queira que outras pessoas possam acessar.</p>
+  <button class="secondary" id="changePin">Trocar PIN</button>
+  <button class="danger" id="clearData" style="margin-left:6px">Apagar meus dados</button>
+ </div>
 </section>
 </main>
+
 <nav>
- <button class="active" data-go="home"><strong>⌂</strong>Início</button><button data-go="tasks"><strong>☑</strong>Rotina</button><button data-go="cycle"><strong>♡</strong>Ciclo</button><button data-go="food"><strong>♧</strong>Comida</button><button data-go="goals"><strong>✧</strong>Mais</button>
+ <button class="active" data-go="home"><strong>⌂</strong>Início</button>
+ <button data-go="tasks"><strong>☑</strong>Rotina</button>
+ <button data-go="cycle"><strong>♡</strong>Ciclo</button>
+ <button data-go="food"><strong>♧</strong>Comida</button>
+ <button data-go="goals"><strong>✧</strong>Mais</button>
 </nav>
+
 <div id="toast"></div>
+
 <script>
-const $=id=>document.getElementById(id), load=(k,d)=>{try{return JSON.parse(localStorage.getItem('mr_'+k))??d}catch{return d}}, save=(k,v)=>localStorage.setItem('mr_'+k,JSON.stringify(v));
-function toast(t){$('toast').textContent=t;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',2300)}
-function today(){return new Date().toISOString().slice(0,10)}
-function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===id));window.scrollTo(0,0)}
-document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));
-$('todayText').textContent=new Date().toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
-// PIN gate (local app lock; not encryption)
-let pinHash=load('pin',null);
-async function hash(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-$('lockText').textContent=pinHash?'Digite seu PIN para abrir.':'Crie um PIN de 4 a 8 números para começar.';
-$('unlock').onclick=async()=>{const p=$('pin').value;if(!/^\d{4,8}$/.test(p)){toast('Use de 4 a 8 números.');return}const h=await hash(p);if(pinHash&&h!==pinHash){toast('PIN incorreto.');return}if(!pinHash){pinHash=h;save('pin',h)}$('lock').classList.add('hidden');$('pin').value=''};
-$('pin').addEventListener('keydown',e=>{if(e.key==='Enter')$('unlock').click()});
-$('changePin').onclick=()=>{const p=prompt('Digite um novo PIN de 4 a 8 números:');if(p===null)return;if(!/^\d{4,8}$/.test(p)){toast('PIN inválido.');return}hash(p).then(h=>{save('pin',h);pinHash=h;toast('PIN atualizado.')})};
-$('clearData').onclick=()=>{if(confirm('Apagar todos os registros e o PIN deste aplicativo neste navegador?')){Object.keys(localStorage).filter(k=>k.startsWith('mr_')).forEach(k=>localStorage.removeItem(k));location.reload()}};
-// Tasks
-let tasks=load('tasks',[]);
-function renderTasks(){$('taskList').innerHTML='';tasks.forEach((t,i)=>{const d=document.createElement('div');d.className='task'+(t.done?' done':'');d.innerHTML=`<input type="checkbox" ${t.done?'checked':''}><span style="flex:1"></span><small class="muted">${t.time||''}</small><button class="danger">×</button>`;d.querySelector('span').textContent=t.text;d.querySelector('input').onchange=e=>{tasks[i].done=e.target.checked;save('tasks',tasks);renderTasks()};d.querySelector('button').onclick=()=>{tasks.splice(i,1);save('tasks',tasks);renderTasks()};$('taskList').append(d)});const done=tasks.filter(t=>t.done).length;$('taskProgress').textContent=tasks.length?`${done} de ${tasks.length} tarefas concluídas. Você está indo no seu ritmo!`:'Adicione uma tarefa pequena para começar.'}
-$('addTask').onclick=()=>{const v=$('taskInput').value.trim();if(!v)return;tasks.push({text:v,time:$('taskTime').value,done:false});save('tasks',tasks);$('taskInput').value='';renderTasks()};renderTasks();
-// Menstrual records
-let periods=load('periods',[]),month=new Date();
-function renderCalendar(){const y=month.getFullYear(),m=month.getMonth();$('monthLabel').textContent=month.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});const cal=$('calendar');cal.innerHTML='';['D','S','T','Q','Q','S','S'].forEach(x=>{const e=document.createElement('div');e.className='day head';e.textContent=x;cal.append(e)});const first=new Date(y,m,1).getDay(),n=new Date(y,m+1,0).getDate();for(let i=0;i<first;i++)cal.append(document.createElement('div'));for(let d=1;d<=n;d++){const date=new Date(y,m,d),iso=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`,e=document.createElement('div');e.className='day'+(iso===today()?' today':'');if(periods.some(p=>iso>=p.start&&iso<=p.end))e.classList.add('period');e.textContent=d;cal.append(e)}}
-$('prevMonth').onclick=()=>{month.setMonth(month.getMonth()-1);renderCalendar()};$('nextMonth').onclick=()=>{month.setMonth(month.getMonth()+1);renderCalendar()};
-$('savePeriod').onclick=()=>{const s=$('periodStart').value,e=$('periodEnd').value||s;if(!s||e<s){toast('Confira as datas.');return}periods.push({start:s,end:e});save('periods',periods);renderCalendar();renderEstimate();toast('Registro salvo.')};
-$('cycleLength').value=load('cycleLength',28);$('cycleLength').onchange=()=>{save('cycleLength',Math.max(20,Math.min(45,+$('cycleLength').value||28)));renderEstimate()};
-function renderEstimate(){const p=periods.slice().sort((a,b)=>a.start.localeCompare(b.start));if(!p.length){$('cycleEstimate').textContent='Ainda não há registros.';return}const len=+load('cycleLength',28),d=new Date(p[p.length-1].start+'T12:00:00');d.setDate(d.getDate()+len);$('cycleEstimate').textContent='Com base no ciclo médio informado, a próxima menstruação poderia começar por volta de '+d.toLocaleDateString('pt-BR')+'. É apenas uma estimativa, não uma previsão garantida.'}
-renderCalendar();renderEstimate();
-let symptoms=load('symptoms',[]);$('saveSymptoms').onclick=()=>{const v=$('symptoms').value.trim();if(!v)return;symptoms.unshift({date:today(),text:v});save('symptoms',symptoms);$('symptomHistory').textContent=symptoms.slice(0,5).map(x=>x.date.split('-').reverse().join('/')+' — '+x.text).join(' • ');$('symptoms').value='';toast('Observação salva.')};$('symptomHistory').textContent=symptoms.slice(0,5).map(x=>x.date.split('-').reverse().join('/')+' — '+x.text).join(' • ');
-// Food and water
-let meals=load('meals',[]);function renderMeals(){$('meals').innerHTML='';meals.forEach((m,i)=>{const d=document.createElement('div');d.className='task';d.innerHTML='<span style="flex:1"></span><button class="danger">×</button>';d.firstChild.textContent=m;d.querySelector('button').onclick=()=>{meals.splice(i,1);save('meals',meals);renderMeals()};$('meals').append(d)})} $('addMeal').onclick=()=>{let v=$('mealInput').value.trim();if(v){meals.push(v);save('meals',meals);$('mealInput').value='';renderMeals()}};renderMeals();
-let water=load('water',{date:today(),count:0});if(water.date!==today())water={date:today(),count:0};function renderWater(){$('waterCount').textContent=water.count+' copos hoje'}$('addWater').onclick=()=>{water.count++;save('water',water);renderWater()};$('resetWater').onclick=()=>{water={date:today(),count:0};save('water',water);renderWater()};renderWater();
-// Movement
-const exercises=['Alongamento confortável','Caminhada leve','Dançar uma música','Yoga suave','Pausa para movimentar o corpo'];$('exerciseList').innerHTML=exercises.map(x=>`<div class="task"><span>${x}</span></div>`).join('');let ex=load('exercises',[]);function renderEx(){$('exerciseHistory').textContent=ex.slice(0,8).map(x=>x.date.split('-').reverse().join('/')+' — '+x.text).join(' • ')}$('addExercise').onclick=()=>{let v=$('exerciseInput').value.trim();if(v){ex.unshift({date:today(),text:v});save('exercises',ex);$('exerciseInput').value='';renderEx()}};renderEx();
-// Mood and sleep
-$('saveMood').onclick=()=>{save('mood_'+today(),{mood:$('mood').value,good:$('goodThing').value});toast('Seu dia foi registrado 💜')};$('saveSleep').onclick=()=>{save('sleep_'+today(),{sleep:$('sleepTime').value,wake:$('wakeTime').value});toast('Horários salvos.')};
-$('breathe').onclick=()=>{let n=60;$('breathText').textContent='Respire suavemente… '+n+'s';const timer=setInterval(()=>{n--;if(n<=0){clearInterval(timer);$('breathText').textContent='Pausa concluída. Muito bem!';}else $('breathText').textContent='Respire suavemente… '+n+'s'},1000)};
-// Goals and reminders
-let goals=load('goals',[]);function renderGoals(){$('goalList').innerHTML='';goals.forEach((g,i)=>{const d=document.createElement('div');d.className='task'+(g.done?' done':'');d.innerHTML=`<input type="checkbox" ${g.done?'checked':''}><span style="flex:1"></span><button class="danger">×</button>`;d.querySelector('span').textContent=g.text;d.querySelector('input').onchange=e=>{g.done=e.target.checked;save('goals',goals);renderGoals()};d.querySelector('button').onclick=()=>{goals.splice(i,1);save('goals',goals);renderGoals()};$('goalList').append(d)})}$('addGoal').onclick=()=>{let v=$('goalInput').value.trim();if(v){goals.push({text:v,done:false});save('goals',goals);$('goalInput').value='';renderGoals()}};renderGoals();
-let reminders=load('reminders',[]);function renderReminders(){$('reminderList').textContent=reminders.map(r=>r.time+' — '+r.text).join(' • ')}renderReminders();
-$('enableNotifications').onclick=async()=>{if(!('Notification'in window)){toast('Notificações não suportadas neste navegador.');return}const p=await Notification.requestPermission();toast(p==='granted'?'Notificações permitidas.':'Permissão não concedida.')};
-$('addReminder').onclick=()=>{const text=$('reminderText').value.trim(),time=$('reminderTime').value;if(!text||!time){toast('Preencha o texto e o horário.');return}reminders.push({text,time});save('reminders',reminders);renderReminders();toast('Lembrete salvo. Abra o app no horário para conferir.')};
-// Reminder check while app open
-setInterval(()=>{const now=new Date(),t=now.toTimeString().slice(0,5),key=today()+'_'+t;if(!load('sent_'+key,false)){const due=reminders.filter(r=>r.time===t);if(due.length){due.forEach(r=>{if('Notification'in window&&Notification.permission==='granted')new Notification('My Routine 🌷',{body:r.text});else toast(r.text)});save('sent_'+key,true)} }},30000);
-if('serviceWorker'in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
-</script>
-</body></html>
-$('enableNotifications').onclick=async()=>{
-  if(!('Notification' in window)){
-    toast('Notificações não suportadas neste navegador.');
-    return;
-  }
-  const p=await Notification.requestPermission();
-  toast(p==='granted'?'Notificações permitidas.':'Permissão não concedida.');
+const $=id=>document.getElementById(id);
+const load=(k,d)=>{
+ try{return JSON.parse(localStorage.getItem('mr_'+k))??d}
+ catch{return d}
 };
+const save=(k,v)=>localStorage.setItem('mr_'+k,JSON.stringify(v));
 
-$('addReminder').onclick=()=>{
-  const text=$('reminderText').value.trim();
-  const time=$('reminderTime').value;
-  if(!text||!time){
-    toast('Preencha o texto e o horário.');
-    return;
-  }
-  reminders.push({text,time});
-  save('reminders',reminders);
-  renderReminders();
-  toast('Lembrete salvo.');
-};
-
-setInterval(()=>{
-  const now=new Date();
-  const t=now.toTimeString().slice(0,5);
-  const key=today()+'_'+t;
-  if(!load('sent_'+key,false)){
-    const due=reminders.filter(r=>r.time===t);
-    if(due.length){
-      due.forEach(r=>{
-        if('Notification' in window && Notification.permission==='granted'){
-          new Notification('My Routine 🌷',{body:r.text});
-        }else{
-          toast(r.text);
-        }
-      });
-      save('sent_'+key,true);
-    }
-  }
-},30000);
-
-if('serviceWorker' in navigator && location.protocol.startsWith('http')){
-  navigator.serviceWorker.register('./sw.js').catch(console.error);
+function toast(t){
+ $('toast').textContent=t;
+ $('toast').style.display='block';
+ setTimeout(()=>$('toast').style.display='none',2300);
 }
-</script>
-</body>
-</html>
+
+function today(){
+ const d=new Date();
+ return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===id));
+ window.scrollTo(0,0);
+}
+
+document.querySelectorAll('[data-go]').forEach(b=>{
+ b.addEventListener('click',()=>showPage(b.dataset.go));
+});
+
+$('todayText').textContent=new Date().toLocaleDateString('pt-BR',{
+ weekday:'long',day:'numeric',month:'long'
+});
+
+// PIN
+let pinHash=load('pin',null);
+
+async function hash(s){
+ const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+ return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+
+$('lockText').textContent=pinHash
+ ?'Digite seu PIN para abrir.'
+ :'Crie um PIN de 4 a 8 números para começar.';
+
+$('unlock').onclick=async()=>{
+ const p=$('pin').value;
+ if(!/^\d{4,8}$/.test(p)){
+  toast('Use de 4 a 8 números.');
+  return;
+ }
+ const h=await hash(p);
+ if(pinHash&&h!==pinHash){
+  toast('PIN incorreto.');
+  return;
+ }
+ if(!pinHash){
+  pinHash=h;
+  save('pin',h);
+ }
+ $('lock').classList.add('hidden');
+ $('pin').value='';
+};
+
+$('pin').addEventListener('keydown',e=>{
+ if(e.key==='Enter')$('unlock').click();
+});
+
+$('changePin').onclick=()=>{
+ const p=prompt('Digite um novo PIN de 4 a 8 números:');
+ if(p===null)return;
+ if(!/^\d{4,8}$/.test(p)){
+  toast('PIN inválido.');
+  return;
+ }
+ hash(p).then(h=>{
+  save('pin',h);
+  pinHash=h;
+  toast('PIN atualizado.');
+ });
+};
+
+$('clearData').onclick=()=>{
+ if(confirm('Apagar todos os registros e o PIN deste aplicativo neste navegador?')){
+  Object.keys(localStorage).filter(k=>k.startsWith('mr_')).forEach(k=>localStorage.removeItem(k));
+  location.reload();
+ }
+};
+
+// TAREFAS
+let tasks=load('tasks',[]);
+
+function renderTasks(){
+ $('taskList').innerHTML='';
+ tasks.forEach((t,i)=>{
+  const d=document.createElement('div');
+  d.className='task'+(t.done?' done':'');
+  d.innerHTML='<input type="checkbox"><span style="flex:1"></span><small class="muted"></small><button class="danger">×</button>';
+  d.querySelector('input').checked=t.done;
+  d.querySelector('span').textContent=t.text;
+  d.querySelector('small').textContent=t.time||'';
+  d.querySelector('input').onchange=e=>{
+   tasks[i].done=e.target.checked;
+   save('tasks',tasks);
+   renderTasks();
+  };
+  d.querySelector('button').onclick=()=>{
+   tasks.splice(i,1);
+   save('tasks',tasks);
+   renderTasks();
+  };
+  $('taskList').append(d);
+ });
+ const done=tasks.filter(t=>t.done).length;
+ $('taskProgress').textContent=tasks.length
+  ?`${done} de ${tasks.length} tarefas concluídas. Você está indo no seu ritmo!`
+  :'Adicione uma tarefa pequena para começar.';
+}
+
+$('addTask').onclick=()=>{
+ const v=$('taskInput').value.trim();
+ if(!v)return;
+ tasks.push({text:v,time:$('taskTime').value,done:false});
+ save('tasks',tasks);
+ $('taskInput').value='';
+ $('taskTime').value='';
+ renderTasks();
+};
+renderTasks();
+
+// CICLO MENSTRUAL
+let periods=load('periods',[]);
+let month=new Date();
+
+function renderCalendar(){
+ const y=month.getFullYear(),m=month.getMonth();
+ $('monthLabel').textContent=month.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
+ const cal=$('calendar');
+ cal.innerHTML='';
+ ['D','S','T','Q','Q','S','S'].forEach(x=>{
+  const e=document.createElement('div');
+  e.className='day head';
+  e.textContent=x;
+  cal.append(e);
+ });
+ const first=new Date(y,m,1).getDay();
+ const n=new Date(y,m+1,0).getDate();
+ for(let i=0;i<first;i++)cal.append(document.createElement('div'));
+ for(let d=1;d<=n;d++){
+  const iso=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+  const e=document.createElement('div');
+  e.className='day'+(iso===today()?' today':'');
+  if(periods.some(p=>iso>=p.start&&iso<=p.end))e.classList.add('period');
+  e.textContent=d;
+  cal.append(e);
+ }
+}
+
+$('prevMonth').onclick=()=>{
+ month.setMonth(month.getMonth()-1);
+ renderCalendar();
+};
+$('nextMonth').onclick=()=>{
+ month.setMonth(month.getMonth()+1);
+ renderCalendar();
+};
+
+$('savePeriod').onclick=()=>{
+ const s=$('periodStart').value;
+ const e=$('periodEnd').value||s;
+ if(!s||e<s){
+  toast('Confira as datas.');
+  return;
+ }
+ periods.push({start:s,end:e});
+ save('periods',periods);
+ renderCalendar();
+ renderEstimate();
+ toast('Registro salvo.');
+};
+
+$('cycleLength').value=load('cycleLength',28);
+$('cycleLength').onchange=()=>{
+ const v=Math.max(20,Math.min(45,+$('cycleLength').value||28));
+ $('cycleLength').value=v;
+ save('cycleLength',v);
+ renderEstimate();
+};
+
+function renderEstimate(){
+ const p=periods.slice().sort((a,b)=>a.start.localeCompare(b.start));
+ if(!p.length){
+  $('cycleEstimate').textContent='Ainda não há registros.';
+  return;
+ }
+ const len=+load('cycleLength',28);
+ const d=new Date(p[p.length-1].start+'T12:00:00');
+ d.setDate(d.getDate()+len);
+ $('cycleEstimate').textContent='Com base no ciclo médio informado, a próxima menstruação poderia começar por volta de '+d.toLocaleDateString('pt-BR')+'. É apenas uma estimativa, não uma previsão garantida.';
+}
+
+renderCalendar();
+renderEstimate();
+
+let symptoms=load('symptoms',[]);
+
+function renderSymptoms(){
+ $('symptomHistory').textContent=symptoms.slice(0,5)
+ .map(x=>x.date.split('-').reverse().join('/')+' — '+x.text).join(' • ');
+}
+
+$('saveSymptoms').onclick=()=>{
+ const v=$('symptoms').value.trim();
+ if(!v)return;
+ symptoms.unshift({date:today(),text:v});
+ save('symptoms',symptoms);
+ renderSymptoms();
+ $('symptoms').value='';
+ toast('Observação salva.');
+};
+renderSymptoms();
+
+// ALIMENTAÇÃO
+let meals=load('meals',[]);
+
+function renderMeals(){
+ $('meals').innerHTML='';
+ meals.forEach((m,i)=>{
+  const d=document.createElement('div');
+  d.className='task';
+  const s=document.createElement('span');
+  s.style.flex='1';
+  s.textContent=m;
+  const b=document.createElement('button');
+  b.className='danger';
+  b.textContent='×';
+  b.onclick=()=>{
+   meals.splice(i,1);
+   save('meals',meals);
+   renderMeals();
+  };
+  d.append(s,b);
+  $('meals').append(d);
+ });
+}
+
+$('addMeal').onclick=()=>{
+ const v=$('mealInput').value.trim();
+ if(v){
+  meals.push(v);
+  save('meals',meals);
+  $('mealInput').value='';
+  renderMeals();
+ }
+};
+renderMeals();
+
+// ÁGUA
+let water=load('water',{date:today(),count:0});
+if(water.date!==today())water={date:today(),count:0};
+
+function renderWater(){
+ $('waterCount').textContent=water.count+' copos hoje';
+}
+
+$('addWater').onclick=()=>{
+ water.count++;
+ save('water',water);
+ renderWater();
+};
+
+$('resetWater').onclick=()=>{
+ water={date:today(),count:0};
+ save('water',water);
+ renderWater();
+};
+renderWater();
+
+// MOVIMENTO
+const exercises=[
+ 'Alongamento confortável',
+ 'Caminhada leve',
+ 'Dançar uma música',
+ 'Yoga suave',
+ 'Pausa para movimentar o corpo'
+];
+
+$('exerciseList').innerHTML=exercises.map(x=>'<div class="task"><span>'+x+'</span></div>').join('');
+
+let ex=load('exercises',[]);
+
+function renderEx(){
+ $('exerciseHistory').textContent=ex.slice(0,8)
+ .map(x=>x.date.split('-').reverse().join('/')+' — '+x.text).join(' • ');
+}
+
+$('addExercise').onclick=()=>{
+ const v=$('exerciseInput').value.trim();
+ if(v){
+  ex.unshift({date:today(),text:v});
+  save('exercises',ex);
+  $('exerciseInput').value='';
+  renderEx();
+ }
+};
+renderEx();
+
+// HUMOR E SONO
+$('saveMood').onclick=()=>{
+ save('mood_'+today(),{
+  mood:$('mood').value,
+  good:$('goodThing').value
+ });
+ toast('Seu dia foi registrado 💜');
+};
+
+$('saveSleep').onclick=()=>{
+ save('sleep_'+today(),{
+  sleep:$('sleepTime').value,
+  wake:$('wakeTime').value
+ });
+ toast('Horários salvos.');
+};
+
+// RESPIRAÇÃO
+let breathTimer=null;
+
+$('breathe').onclick=()=>{
+ if(breathTimer)clearInterval(breathTimer);
+ let n=60;
+ $('breathText').textContent='Respire suavemente… '+n+'s';
+ breathTimer=setInterval(()=>{
+  n--;
+  if(n<=0){
