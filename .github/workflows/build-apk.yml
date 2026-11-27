@@ -7,6 +7,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,29 +27,30 @@ jobs:
       - name: Configurar Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
-      - name: Preparar Capacitor
+      - name: Preparar arquivos
         run: |
           mkdir -p www
           cp index.html www/
-          cp manifest.json www/
-          cp sw.js www/
-         
+          if [ -f manifest.json ]; then cp manifest.json www/; fi
+          if [ -f sw.js ]; then cp sw.js www/; fi
+          if [ -d 192 ]; then cp -R 192 www/; fi
+          if [ -d 512 ]; then cp -R 512 www/; fi
           npm init -y
-          npm install @capacitor/core @capacitor/cli @capacitor/android
+          npm install @capacitor/core@7 @capacitor/cli@7 @capacitor/android@7
 
-      - name: Configurar aplicativo
+      - name: Configurar Android
         run: |
           npx cap init "My Routine" "com.myroutine.app" --web-dir www
           npx cap add android
           npx cap sync android
 
-      - name: Gerar APK
+      - name: Compilar APK
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleDebug --no-daemon
 
       - name: Disponibilizar APK
         uses: actions/upload-artifact@v4
