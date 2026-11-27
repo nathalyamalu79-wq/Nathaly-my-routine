@@ -1,0 +1,19 @@
+MY ROUTINE 🌷 — primeira versão
+
+Conteúdo:
+- index.html: aplicativo responsivo
+- manifest.json e sw.js: suporte básico a instalação como PWA
+
+Como testar:
+1. Extraia o ZIP.
+2. Abra index.html no navegador para testar (algumas funções de instalação/notificações exigem HTTPS).
+3. Para instalar como aplicativo Android, publique os arquivos em um serviço de hospedagem HTTPS.
+4. Abra o endereço no Chrome do Android e use o menu ⋮ > Instalar app ou Adicionar à tela inicial.
+
+Importante:
+- Esta é uma primeira versão/protótipo, não um APK.
+- Os dados ficam no armazenamento local do navegador deste aparelho.
+- O PIN é um bloqueio de tela, NÃO criptografa os dados. Não use em aparelho compartilhado para guardar informações sensíveis.
+- Lembretes funcionam com o app aberto; notificações em segundo plano não são garantidas nesta versão.
+- O calendário menstrual guarda registros e faz estimativa simples baseada no ciclo médio informado. Não é método contraceptivo nem orientação médica.
+- Alimentação e movimento são ferramentas gerais de bem-estar, não dieta ou prescrição de exercícios.

@@ -1,0 +1,10 @@
+{
+  "name": "My Routine - Meu cantinho",
+  "short_name": "My Routine",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff9fd",
+  "theme_color": "#f7e8f2",
+  "lang": "pt-BR",
+  "icons": []
+}
